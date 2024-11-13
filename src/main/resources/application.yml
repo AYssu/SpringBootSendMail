@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: SpringBootSendMail
+  # 自定义邮件配置
+  profiles:
+    active: dev
+  mail:
+    host: smtp.qq.com
+    protocol: smtp
+    default-encoding: utf-8
+    username: xxx@qq.com
+    password: xxx
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true
+          connection-timeout: 5000
+          timeout: 3000
+          auth: true
+          starttls:
+            enable: true
+            required: true
+        debug: true
+    port: 465
